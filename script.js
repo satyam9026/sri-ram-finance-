@@ -1,178 +1,89 @@
-    // ===== MOBILE MENU TOGGLE =====
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
+// Responsive menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navbarBottom = document.getElementById('navbarBottom');
+  const navItems = document.querySelectorAll('.nav-item');
 
-        if (menuToggle) {
-            menuToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-            });
+  menuToggle.addEventListener('click', () => {
+    navbarBottom.classList.toggle('active');
+  });
 
-            // Close menu when a link is clicked
-            const navLinks = navMenu.querySelectorAll('a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                });
-            });
-        }
-
-        // ===== HERO SLIDER =====
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const indicators = document.querySelectorAll('.indicator');
-        const totalSlides = slides.length;
-
-        function showSlide(n) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            indicators.forEach(indicator => indicator.classList.remove('active'));
-
-            slides[n].classList.add('active');
-            indicators[n].classList.add('active');
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            showSlide(currentSlide);
-        }
-
-        // Auto-rotate slider every 5 seconds
-        let sliderInterval = setInterval(nextSlide, 5000);
-
-        // Reset interval on manual navigation
-        function resetSliderInterval() {
-            clearInterval(sliderInterval);
-            sliderInterval = setInterval(nextSlide, 5000);
-        }
-
-        // Next and Previous buttons
-        const nextBtn = document.getElementById('nextBtn');
-        const prevBtn = document.getElementById('prevBtn');
-
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-                resetSliderInterval();
-            });
-        }
-
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-                resetSliderInterval();
-            });
-        }
-
-        // Indicator dots
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                currentSlide = index;
-                showSlide(currentSlide);
-                resetSliderInterval();
-            });
+  // Dropdown toggle for mobile
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      if (window.innerWidth <= 991) {
+        // Close other dropdowns
+        navItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('dropdown-active');
+          }
         });
+        // Toggle current dropdown
+        item.classList.toggle('dropdown-active');
+      }
+    });
+  });
 
-        // ===== CONTACT FORM VALIDATION =====
-        const contactForm = document.getElementById('contactForm');
-
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const phone = document.getElementById('phone').value.trim();
-                const subject = document.getElementById('subject').value.trim();
-                const message = document.getElementById('message').value.trim();
-
-                // Basic validation
-                if (!name || !email || !phone || !subject || !message) {
-                    alert('Please fill in all fields');
-                    return;
-                }
-
-                // Email validation
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(email)) {
-                    alert('Please enter a valid email address');
-                    return;
-                }
-
-                // Phone validation (basic)
-                const phoneRegex = /^[0-9]{10,}$/;
-                if (!phoneRegex.test(phone.replace(/\D/g, ''))) {
-                    alert('Please enter a valid phone number');
-                    return;
-                }
-
-                // If validation passes
-                alert('Thank you for your message! We will get back to you soon.');
-                contactForm.reset();
-            });
-        }
-
-        // ===== SCROLL ANIMATIONS =====
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'slideInUp 0.6s ease-out forwards';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Observe feature cards, service items, and product cards
-        document.querySelectorAll('.feature-card, .service-item, .product-card, .team-member').forEach(el => {
-            el.style.opacity = '0';
-            observer.observe(el);
+  // Close menu when clicking outside on mobile
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 991 && navbarBottom.classList.contains('active')) {
+      if (!navbarBottom.contains(e.target) && !menuToggle.contains(e.target)) {
+        navbarBottom.classList.remove('active');
+        navItems.forEach(item => {
+          item.classList.remove('dropdown-active');
         });
+      }
+    }
+  });
 
-        // ===== NAVBAR SCROLL EFFECT =====
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+  // JS for Play Button
+  const playBtn = document.getElementById("ckyc-play-btn");
+  const video = document.getElementById("ckyc-video");
 
-            // Update active nav link
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-menu a');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
+  if (playBtn && video) {
+    playBtn.addEventListener("click", () => {
+      if (video.paused) {
+        video.play();
+        playBtn.style.display = "none";
+      } else {
+        video.pause();
+        playBtn.style.display = "block";
+      }
+    });
 
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
+    video.addEventListener("ended", () => {
+      playBtn.style.display = "block";
+    });
+  }
 
-        // ===== KEYBOARD NAVIGATION FOR SLIDER =====
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                prevSlide();
-                resetSliderInterval();
-            } else if (e.key === 'ArrowRight') {
-                nextSlide();
-                resetSliderInterval();
-            }
-        });
+  // Scroll to top button
+  const btn = document.getElementById('scrollTopBtn');
+  if (btn) {
+    btn.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+    
+    // Show/hide scroll button based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        btn.style.display = 'block';
+      } else {
+        btn.style.display = 'none';
+      }
+    });
+  }
+
+  // Optional: Add animations on scroll (for smoother UX)
+  const elements = document.querySelectorAll('.feature-card, .banner, .bill-section, .sf-info-box, .sf-card, .sf-calculator-box, .article-card');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(40px)';
+    el.style.transition = 'all 0.6s ease-out';
+    observer.observe(el);
+  });

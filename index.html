@@ -1,594 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Ram Finance - Your Trusted Financial Partner</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shriram Finance Navbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <h1>Sri Ram Finance</h1>
-                </div>
-                <button class="menu-toggle" id="menuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+
+  <!-- Top Navbar -->
+  <header class="navbar-top">
+    <div class="menu-toggle" id="menuToggle"><i class="bi bi-list"></i></div>
+
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/en/1/15/Shriram_Group_logo.png" alt="Shriram Logo">
+  
+    </div>
+
+    <div class="navbar-actions">
+      <div class="gold-price">Gold Price <i class="bi bi-chevron-down"></i></div>
+      <div class="notification"><i class="bi bi-bell"></i><span>5</span></div>
+      <button class="btn-login"><i class="bi bi-person"></i> Register / Login</button>
+    </div>
+  </header>
+
+  <!-- Bottom Navbar -->
+  <nav class="navbar-bottom" id="navbarBottom">
+    <div class="nav-item">Investments <i class="bi bi-chevron-down"></i>
+      <div class="dropdown-menu">
+        <a href="#">Fixed Deposits</a>
+        <a href="#">Recurring Deposits</a>
+        <a href="#">Mutual Funds</a>
+      </div>
+    </div>
+
+    <div class="nav-item">Loans <i class="bi bi-chevron-down"></i>
+      <div class="dropdown-menu">
+        <a href="#">Personal Loan</a>
+        <a href="#">Business Loan</a>
+        <a href="#">Home Loan</a>
+      </div>
+    </div>
+
+    <div class="nav-item">Two Wheeler Marketplace <i class="bi bi-chevron-down"></i>
+      <div class="dropdown-menu">
+        <a href="#">New Bikes</a>
+        <a href="#">Used Bikes</a>
+      </div>
+    </div>
+
+    <div class="nav-item">Payments <i class="bi bi-chevron-down"></i>
+      <div class="dropdown-menu">
+        <a href="#">Pay EMI</a>
+        <a href="#">Check Balance</a>
+      </div>
+    </div>
+
+    <div class="nav-item">Insurance <i class="bi bi-chevron-down"></i>
+      <div class="dropdown-menu">
+        <a href="#">Life Insurance</a>
+        <a href="#">Health Insurance</a>
+      </div>
+    </div>
+
+    <div class="nav-item">Rewards</div>
+
+    <div class="nav-item">Calculators <i class="bi bi-chevron-down"></i>
+      <div class="dropdown-menu">
+        <a href="#">EMI Calculator</a>
+        <a href="#">FD Calculator</a>
+      </div>
+    </div>
+
+    <div class="nav-item">Discover Shriram <i class="bi bi-chevron-down"></i>
+      <div class="dropdown-menu">
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <div class="nav-item">Investors</div>
+  </nav>
+
+  <!-- hero section -->
+
+<div class="section-container">
+
+  <!-- Feature Cards -->
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-header">
+        <h3>Investments</h3>
+        <a href="#">View All</a>
+      </div>
+      <div class="feature-options">
+        <div class="option">
+          <i class="bi bi-safe"></i>
+          <p>Fixed Deposit</p>
+          <div class="earn-text">Earn up to 8.15%* p.a.</div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-slider">
-        <div class="slider-container">
-            <div class="slider-wrapper">
-                <!-- Slide 1 -->
-                <div class="slide active">
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop" alt="Financial Growth">
-                    <div class="slide-content">
-                        <h2>Grow Your Wealth</h2>
-                        <p>Expert financial solutions for your future</p>
-                        <a href="#contact" class="btn btn-primary">Get Started</a>
-                    </div>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="slide">
-                    <img src="IMAGE/BBBB.webp" alt="Investment Planning">
-                    <div class="slide-content">
-                        <h2>Smart Investments</h2>
-                        <p>Diversify your portfolio with confidence</p>
-                        <a href="#products" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="slide">
-                    <img src="IMAGE/Shriram-Finance-Allots-₹485-Crore-via-Private-NCD-Issue-at-9.233-Coupon-Yield-at-7.75_.webp" alt="Secure Banking">
-                    <div class="slide-content">
-                        <h2>Secure Banking</h2>
-                        <p>Your money is safe with us</p>
-                        <a href="#services" class="btn btn-primary">Explore</a>
-                    </div>
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="slide">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop" alt="Financial Planning">
-                    <div class="slide-content">
-                        <h2>Financial Planning</h2>
-                        <p>Plan your future with expert guidance</p>
-                        <a href="#contact" class="btn btn-primary">Consult Now</a>
-                    </div>
-                </div>
-
-                <!-- Slide 5 -->
-                <div class="slide">
-                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1200&h=600&fit=crop" alt="Wealth Management">
-                    <div class="slide-content">
-                        <h2>Wealth Management</h2>
-                        <p>Maximize returns, minimize risks</p>
-                        <a href="#services" class="btn btn-primary">Start Today</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slider Controls -->
-            <button class="slider-btn prev" id="prevBtn">❮</button>
-            <button class="slider-btn next" id="nextBtn">❯</button>
-
-            <!-- Slider Indicators -->
-            <div class="slider-indicators">
-                <span class="indicator active" data-slide="0"></span>
-                <span class="indicator" data-slide="1"></span>
-                <span class="indicator" data-slide="2"></span>
-                <span class="indicator" data-slide="3"></span>
-                <span class="indicator" data-slide="4"></span>
-            </div>
+        <div class="option">
+          <i class="bi bi-coin"></i>
+          <p>Fixed Investment Plan</p>
+          <div class="earn-text">Earn up to 7.65%* p.a.</div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Why Choose Sri Ram Finance?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Expert Analysis</h3>
-                    <p>Data-driven insights for better decisions</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Secure & Safe</h3>
-                    <p>Industry-leading security standards</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>Best Returns</h3>
-                    <p>Competitive rates and high yields</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>Expert Team</h3>
-                    <p>Dedicated professionals at your service</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="feature-card">
+      <div class="feature-header">
+        <h3>Loans</h3>
+        <a href="#">View All</a>
+      </div>
+      <div class="feature-options">
+        <div class="option"><i class="bi bi-bicycle"></i><p>Two Wheeler Loan</p></div>
+        <div class="option"><i class="bi bi-person-lines-fill"></i><p>Personal Loan</p></div>
+        <div class="option"><i class="bi bi-car-front"></i><p>Used Car Loan</p></div>
+        <div class="option"><i class="bi bi-shop"></i><p>Business Loan</p></div>
+      </div>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">About Sri Ram Finance</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Our Story</h2>
-                    <p>Sri Ram Finance was founded with a vision to revolutionize the financial services industry. With over 20 years of experience, we have helped thousands of clients achieve their financial goals.</p>
-                    <p>Our commitment to excellence, integrity, and customer satisfaction has made us one of the most trusted names in finance.</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop" alt="Our Team">
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="feature-card">
+      <div class="feature-header">
+        <h3>Gold Zone <span class="tag" style="background:#ff5959;">New</span></h3>
+        <a href="#">View All</a>
+      </div>
+      <div class="feature-options">
+        <div class="option"><i class="bi bi-cash-stack"></i><p>Apply Gold Loan</p></div>
+        <div class="option"><i class="bi bi-coin"></i><p>Digital Gold</p></div>
+        <div class="option"><i class="bi bi-geo-alt"></i><p>Locate Us</p></div>
+        <div class="option"><i class="bi bi-calculator"></i><p>Gold Calculator</p></div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Mission & Vision -->
-    <section class="mission-vision">
-        <div class="container">
-            <div class="mission-vision-grid">
-                <div class="mission-card">
-                    <h3>Our Mission</h3>
-                    <p>To provide innovative financial solutions that empower individuals and businesses to achieve their financial dreams with confidence and security.</p>
-                </div>
-                <div class="vision-card">
-                    <h3>Our Vision</h3>
-                    <p>To be the most trusted and preferred financial partner, recognized for our expertise, integrity, and commitment to client success.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Banners -->
+  <div class="banner-row">
+    <div class="banner">
+      <img src="IMAGE/Shriram Fixed Deposit.png" alt="Shriram Fixed Deposit">
+    </div>
+    <div class="banner">
+      <img src="IMAGE/Gold Loan.jpg" alt="Gold Loan">
+    </div>
+    <div class="banner">
+      <img src="IMAGE/Cashback.jpg" alt="Cashback">
+    </div>
+  </div>
 
-    <!-- Core Values -->
-    <section class="values-section">
-        <div class="container">
-            <h2 class="section-title">Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <h3>Integrity</h3>
-                    <p>We conduct business with the highest ethical standards</p>
-                </div>
-                <div class="value-card">
-                    <h3>Excellence</h3>
-                    <p>We strive for excellence in everything we do</p>
-                </div>
-                <div class="value-card">
-                    <h3>Innovation</h3>
-                    <p>We embrace innovation and continuous improvement</p>
-                </div>
-                <div class="value-card">
-                    <h3>Customer Focus</h3>
-                    <p>Your success is our priority</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Bill Payments -->
+  <div class="bill-section">
+    <div class="bill-header">
+      <h3>Bill Payments <span class="tag">Earn Rewards</span></h3>
+      <a href="#" style="color:#007bff;">View All</a>
+    </div>
+    <div class="bill-icons">
+      <div class="bill-item"><i class="bi bi-phone"></i><span>Mobile Prepaid</span></div>
+      <div class="bill-item"><i class="bi bi-phone-fill"></i><span>Mobile Postpaid</span></div>
+      <div class="bill-item"><i class="bi bi-telephone"></i><span>Landline</span></div>
+      <div class="bill-item"><i class="bi bi-tv"></i><span>DTH</span></div>
+      <div class="bill-item"><i class="bi bi-speedometer2"></i><span>Fastag</span></div>
+      <div class="bill-item"><i class="bi bi-lightning-charge"></i><span>Electricity</span></div>
+      <div class="bill-item"><i class="bi bi-fire"></i><span>LPG Gas</span></div>
+      <div class="bill-item"><i class="bi bi-wifi"></i><span>Broadband</span></div>
+      <div class="bill-item"><i class="bi bi-droplet"></i><span>Water</span></div>
+      <div class="bill-item"><i class="bi bi-credit-card"></i><span>Credit Card</span></div>
+      <div class="bill-item"><i class="bi bi-currency-rupee"></i><span>Loan Repayment</span></div>
+      <div class="bill-item"><i class="bi bi-shield-check"></i><span>Insurance</span></div>
+    </div>
+  </div>
 
-    <!-- Team Section -->
-    <section class="team-section">
-        <div class="container">
-            <h2 class="section-title">Our Leadership Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop" alt="CEO">
-                    <h3>Rajesh Kumar</h3>
-                    <p>Chief Executive Officer</p>
-                    <p class="bio">20+ years of experience in financial services</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" alt="CFO">
-                    <h3>Priya Sharma</h3>
-                    <p>Chief Financial Officer</p>
-                    <p class="bio">Expert in investment management and portfolio planning</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop" alt="COO">
-                    <h3>Amit Patel</h3>
-                    <p>Chief Operating Officer</p>
-                    <p class="bio">Specialist in operational excellence and client relations</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" alt="Head of Investments">
-                    <h3>Neha Gupta</h3>
-                    <p>Head of Investments</p>
-                    <p class="bio">15+ years in investment advisory and wealth management</p>
-                </div>
-            </div>
-        </div>
-    </section>
+</div>
 
-    <!-- Stats Section -->
+<!-- sf-main-section -->
+   <section id="sf-main-section" class="sf-section-wrapper">
 
-  <section class="stats-section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <h3 class="counter" data-target="5000">0</h3>
-          <p>Happy Clients</p>
+    <!-- General Insurance -->
+    <div id="sf-general-insurance" class="sf-info-box">
+      <h3 class="sf-box-title">
+        General Insurance <a href="#" class="sf-view-link">View All</a>
+      </h3>
+      <div class="sf-items-container">
+        <div class="sf-item" id="sf-four-wheeler">
+          <i class="bi bi-car-front"></i>
+          <p>Four Wheeler</p>
         </div>
-        <div class="stat-card">
-          <h3 class="counter" data-target="500">0</h3>
-          <p>Assets Under Management (Cr)</p>
+        <div class="sf-item" id="sf-two-wheeler">
+          <i class="bi bi-scooter"></i>
+          <p>Two Wheeler</p>
         </div>
-        <div class="stat-card">
-          <h3 class="counter" data-target="20">0</h3>
-          <p>Years of Experience</p>
+        <div class="sf-item" id="sf-goods-vehicle">
+          <i class="bi bi-truck"></i>
+          <p>Goods vehicle</p>
         </div>
-        <div class="stat-card">
-          <h3 class="counter" data-target="98">0</h3>
-          <p>Client Satisfaction (%)</p>
+        <div class="sf-item" id="sf-criti-care">
+          <i class="bi bi-heart"></i>
+          <p>Shri Criti<br>Care Insurance</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Life Insurance -->
+    <div id="sf-life-insurance" class="sf-info-box">
+      <h3 class="sf-box-title">
+        Life Insurance <a href="#" class="sf-view-link">View All</a>
+      </h3>
+      <div class="sf-items-container">
+        <div class="sf-item" id="sf-assured-plan">
+          <i class="bi bi-shield-check"></i>
+          <p>Shriram Life<br>Assured Income Plan</p>
+        </div>
+        <div class="sf-item" id="sf-early-cash">
+          <i class="bi bi-cash-coin"></i>
+          <p>Shriram Life<br>Early Cash Plan</p>
+        </div>
+        <div class="sf-item" id="sf-premier-benefit">
+          <i class="bi bi-gear-wide-connected"></i>
+          <p>Shriram Life Premier<br>Assured Benefit Plan</p>
+        </div>
+        <div class="sf-item" id="sf-vidya-plan">
+          <i class="bi bi-shield-fill"></i>
+          <p>Shriram Life<br>New Shri Vidya Plan</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Two Wheeler Marketplace -->
+    <div id="sf-two-wheeler-marketplace" class="sf-info-box">
+      <h3 class="sf-box-title">
+        Two Wheeler Marketplace <a href="#" class="sf-view-link">View more</a>
+      </h3>
+      <div class="sf-items-container">
+        <div class="sf-item" id="sf-bikes">
+          <i class="bi bi-bicycle"></i>
+          <p>Bikes</p>
+        </div>
+        <div class="sf-item" id="sf-scooters">
+          <i class="bi bi-scooter"></i>
+          <p>Scooters</p>
+        </div>
+        <div class="sf-item" id="sf-ev-hub">
+          <i class="bi bi-lightning-charge"></i>
+          <p>EV Hub</p>
+        </div>
+        <div class="sf-item" id="sf-compare-bikes">
+          <i class="bi bi-bar-chart"></i>
+          <p>Compare Bikes</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+   <!-- ===== MAIN SECTION START ===== -->
+  <section class="sf-section">
+    <div class="sf-content-container">
+      <!-- Left Content -->
+      <div class="sf-left-content">
+        <h2>We have your<br>finances covered</h2>
+        <p>
+          Explore our diverse financial solutions from high-yield deposits to versatile loans, ensuring security for personal, business and family needs.
+        </p>
+      </div>
+
+      <!-- Cards -->
+      <div class="sf-card-container">
+        <div class="sf-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/859/859270.png" alt="Fixed Deposit">
+          <div class="sf-card-content">
+            <h3 class="sf-card-title">Fixed Deposit</h3>
+            <p class="sf-card-text">Invest in Shriram Unnati Fixed Deposit for attractive interest rates, assured returns and flexible tenure options.</p>
+            <a href="#" class="sf-card-btn">Know More</a>
+          </div>
+        </div>
+
+        <div class="sf-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2920/2920207.png" alt="Two Wheeler Loan">
+          <div class="sf-card-content">
+            <h3 class="sf-card-title">Two-wheeler Loan</h3>
+            <p class="sf-card-text">Getting a Two-wheeler Loan is quick and convenient. Avail low-interest loan starting from 10% p.a. with flexible EMI options.</p>
+            <a href="#" class="sf-card-btn">Know More</a>
+          </div>
+        </div>
+
+        <div class="sf-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1209/1209559.png" alt="Fuel Finance">
+          <div class="sf-card-content">
+            <h3 class="sf-card-title">Fuel Finance</h3>
+            <p class="sf-card-text">Fuel Finance enables businesses like fleet owners and truckers to finance fuel purchases and repay in convenient instalments.</p>
+            <a href="#" class="sf-card-btn">Know More</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- ===== CALCULATOR BOX SECTION ===== -->
+    <div class="sf-calculator-section">
+      <div class="sf-calculator-box">
+        <div class="sf-calculator-header">
+          <h3>Investment Calculators</h3>
+          <a href="#">View All</a>
+        </div>
+        <div class="sf-calculator-items">
+          <div class="sf-calc-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/2645/2645897.png" alt="">
+            <p>Fixed Deposit Calculator</p>
+          </div>
+          <div class="sf-calc-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="">
+            <p>FIP Calculator</p>
+          </div>
+          <div class="sf-calc-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/4228/4228706.png" alt="">
+            <p>SIP Calculator</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sf-calculator-box">
+        <div class="sf-calculator-header">
+          <h3>Loan Calculators</h3>
+          <a href="#">View All</a>
+        </div>
+        <div class="sf-calculator-items">
+          <div class="sf-calc-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/2645/2645785.png" alt="">
+            <p>Student Loan Calculator</p>
+          </div>
+          <div class="sf-calc-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/4359/4359993.png" alt="">
+            <p>Loan To Value Calculator</p>
+          </div>
+          <div class="sf-calc-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
+            <p>Personal Loan EMI</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sf-calculator-box">
+        <div class="sf-calculator-header">
+          <h3>Other Calculators</h3>
+          <a href="#">View All</a>
+        </div>
+        <div class="sf-calculator-items">
+          <div class="sf-calc-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/2271/2271061.png" alt="">
+            <p>Credit Card Calculator</p>
+          </div>
+          <div class="sf-calc-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/272/272075.png" alt="">
+            <p>Down Payment Calculator</p>
+          </div>
+          <div class="sf-calc-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="">
+            <p>Salary Calculator</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== MAIN SECTION END ===== -->
+
+    <!-- ===== CKYC SECTION START ===== -->
+  <section id="ckyc-section" class="ckyc-section">
+    <h2 class="ckyc-title">Regulatory Information - CKYC Video for Customer Awareness</h2>
+
+    <div class="ckyc-container">
+      <!-- LEFT IMAGE -->
+      <div class="ckyc-left">
+        <img src="IMAGE/Cersai-banner.webp" alt="CKYC Poster" />
+      </div>
+
+      <!-- RIGHT VIDEO BOX -->
+      <div class="ckyc-right">
+        <div class="ckyc-video-box" id="ckyc-video-box">
+          <video id="ckyc-video" poster="https://via.placeholder.com/550x310?text=Video+Poster" preload="none">
+            <source src="#" type="video/mp4" />
+          </video>
+          <i id="ckyc-play-btn" class="bi bi-play-circle ckyc-play-btn"></i>
         </div>
       </div>
     </div>
   </section>
 
-  <script>
-    // Count up animation
-    const counters = document.querySelectorAll('.counter');
+  <!-- ===== FIXED RIGHT BUTTONS ===== -->
+  <div class="ckyc-fixed-buttons" id="ckyc-fixed-buttons">
+    <div class="ckyc-fixed-btn"><i class="bi bi-geo-alt"></i></div>
+    <div class="ckyc-fixed-btn"><i class="bi bi-question-circle"></i></div>
+    <div class="ckyc-fixed-btn"><i class="bi bi-speedometer2"></i></div>
+    <div class="ckyc-fixed-btn"><i class="bi bi-calculator"></i></div>
+  </div>
 
-    const startCounting = () => {
-      counters.forEach(counter => {
-        counter.innerText = '0';
-        const updateCount = () => {
-          const target = +counter.getAttribute('data-target');
-          const count = +counter.innerText;
-          const speed = 100; // lower = faster
-          const increment = target / speed;
+  <!-- =============================
+     ARTICLES SECTION START
+============================= -->
+<section class="article-section" id="article-section">
+  <div class="article-header">
+    <h2>Articles</h2>
+    <a href="#">View All</a>
+  </div>
 
-          if (count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(updateCount, 30);
-          } else {
-            counter.innerText = target + (counter.dataset.target >= 1000 ? '+' : '');
-          }
-        };
-        updateCount();
-      });
-    };
+  <div class="article-container">
+    <!-- Card 1 -->
+    <div class="article-card">
+      <div class="article-img">
+        <img src="IMAGE/Article.jpg" alt="Article 1">
+      </div>
+      <div class="article-content">
+        <h3>How to Plan Your Retirement...</h3>
+        <p>Learn how to plan a retirement investment portfolio that balances...</p>
+        <button class="article-btn">Read More</button>
+      </div>
+    </div>
 
-    // Trigger when section visible
-    const section = document.querySelector('.stats-section');
-    let started = false;
+    <!-- Card 2 -->
+    <div class="article-card">
+      <div class="article-img">
+        <img src="IMAGE/Article 2.jpg" alt="Article 2">
+      </div>
+      <div class="article-content">
+        <h3>A Beginner's Guide to Making Your...</h3>
+        <p>Explore a beginner-friendly guide to investing online. Learn...</p>
+        <button class="article-btn">Read More</button>
+      </div>
+    </div>
 
-    window.addEventListener('scroll', () => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
+    <!-- Card 3 -->
+    <div class="article-card">
+      <div class="article-img">
+        <img src="IMAGE/Article 3.jpg" alt="Article 3">
+      </div>
+      <div class="article-content">
+        <h3>Personal Loan Application...</h3>
+        <p>Discover the must-have personal loan application checklist...</p>
+        <button class="article-btn">Read More</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-      if (sectionTop < windowHeight && !started) {
-        started = true;
-        startCounting();
-      }
-    });
-  </script>
-
-    <!-- Services Section -->
-    <section id="services" class="services-detailed">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="service-detail-card">
-                <div class="service-detail-image">
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=400&fit=crop" alt="Investment Advisory">
-                </div>
-                <div class="service-detail-content">
-                    <h2>Investment Advisory</h2>
-                    <p>Our expert advisors provide personalized investment strategies tailored to your financial goals, risk tolerance, and time horizon. We analyze market trends and identify opportunities to maximize your returns.</p>
-                    <ul class="service-features">
-                        <li>✓ Personalized portfolio management</li>
-                        <li>✓ Market analysis and insights</li>
-                        <li>✓ Risk assessment and mitigation</li>
-                        <li>✓ Regular performance reviews</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="service-detail-card reverse">
-                <div class="service-detail-image">
-                    <img src="IMAGE/Wealth Management.jpg" alt="Wealth Management">
-                </div>
-                <div class="service-detail-content">
-                    <h2>Wealth Management</h2>
-                    <p>Comprehensive wealth management services designed to grow and protect your assets. We provide holistic financial planning covering investments, tax optimization, and estate planning.</p>
-                    <ul class="service-features">
-                        <li>✓ Asset allocation strategies</li>
-                        <li>✓ Tax-efficient investing</li>
-                        <li>✓ Estate planning services</li>
-                        <li>✓ Retirement planning</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="service-detail-card">
-                <div class="service-detail-image">
-                    <img src="IMAGE/Retirement Planning.webp" alt="Retirement Planning">
-                </div>
-                <div class="service-detail-content">
-                    <h2>Retirement Planning</h2>
-                    <p>Secure your retirement with our comprehensive planning services. We help you build a sustainable retirement income strategy and ensure your financial independence.</p>
-                    <ul class="service-features">
-                        <li>✓ Retirement income planning</li>
-                        <li>✓ Pension optimization</li>
-                        <li>✓ Social security planning</li>
-                        <li>✓ Healthcare cost planning</li>
-                    </ul>
-                </div>
-            </div>
+  <!-- =============================
+     FOOTER SECTION START
+============================= -->
+<footer class="footer-section" id="footer-main">
+  <div class="footer-top">
+    <!-- Left: QR & App -->
+    <div class="footer-app">
+      <div class="footer-qr">
+        <img src="https://via.placeholder.com/100x100.png?text=QR" alt="QR Code">
+      </div>
+      <div>
+        <div class="footer-text">
+          <p><strong>Scan QR code</strong><br>to download<br><strong>Shriram One app</strong></p>
         </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="products-section">
-        <div class="container">
-            <h2 class="section-title">Our Products</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-icon">📈</div>
-                    <h3>Mutual Funds</h3>
-                    <p>Diversified investment portfolios managed by expert fund managers</p>
-                    <ul class="product-features">
-                        <li>Low minimum investment</li>
-                        <li>Professional management</li>
-                        <li>Diversification</li>
-                        <li>Flexible redemption</li>
-                    </ul>
-                    <button class="btn btn-secondary">Learn More</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-icon">💳</div>
-                    <h3>Fixed Deposits</h3>
-                    <p>Secure savings with guaranteed returns and flexible tenure options</p>
-                    <ul class="product-features">
-                        <li>Guaranteed returns</li>
-                        <li>Safe investment</li>
-                        <li>Flexible tenure</li>
-                        <li>Tax benefits</li>
-                    </ul>
-                    <button class="btn btn-secondary">Learn More</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-icon">🏠</div>
-                    <h3>Real Estate Investment</h3>
-                    <p>Invest in premium real estate projects with high appreciation potential</p>
-                    <ul class="product-features">
-                        <li>High returns</li>
-                        <li>Tangible assets</li>
-                        <li>Tax advantages</li>
-                        <li>Long-term growth</li>
-                    </ul>
-                    <button class="btn btn-secondary">Learn More</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-icon">💰</div>
-                    <h3>Gold Investment</h3>
-                    <p>Invest in gold through various schemes with easy liquidity</p>
-                    <ul class="product-features">
-                        <li>Inflation hedge</li>
-                        <li>Easy liquidity</li>
-                        <li>No storage cost</li>
-                        <li>Flexible amounts</li>
-                    </ul>
-                    <button class="btn btn-secondary">Learn More</button>
-                </div>
-            </div>
+        <div class="footer-buttons">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- Comparison Table -->
-    <section class="comparison-section">
-        <div class="container">
-            <h2 class="section-title">Product Comparison</h2>
-            <div class="table-wrapper">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Product</th>
-                            <th>Min. Investment</th>
-                            <th>Expected Return</th>
-                            <th>Risk Level</th>
-                            <th>Liquidity</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Mutual Funds</td>
-                            <td>₹500</td>
-                            <td>8-15%</td>
-                            <td>Medium</td>
-                            <td>High</td>
-                        </tr>
-                        <tr>
-                            <td>Fixed Deposits</td>
-                            <td>₹1,000</td>
-                            <td>5-7%</td>
-                            <td>Low</td>
-                            <td>Medium</td>
-                        </tr>
-                        <tr>
-                            <td>Real Estate</td>
-                            <td>₹5,00,000</td>
-                            <td>10-20%</td>
-                            <td>Medium</td>
-                            <td>Low</td>
-                        </tr>
-                        <tr>
-                            <td>Gold Investment</td>
-                            <td>₹100</td>
-                            <td>5-8%</td>
-                            <td>Low</td>
-                            <td>High</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
+    <!-- Middle: Contacts -->
+    <div class="footer-contacts">
+      <div>
+        <h4>Toll Free Number:</h4>
+        <p>18001034959<br>18001036369</p>
+      </div>
+      <div>
+        <h4>Deposit Customer Care:</h4>
+        <p>18001034959<br>18001036369<br>02241574545</p>
+      </div>
+    </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-wrapper">
-                <!-- Contact Form -->
-                <div class="contact-form-wrapper">
-                    <h2>Send us a Message</h2>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
+    <!-- Right: Social -->
+    <div class="footer-social">
+      <h4>Follow us on:</h4>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
 
-                <!-- Contact Info -->
-                <div class="contact-info-wrapper">
-                    <h2>Contact Information</h2>
-                    
-                    <div class="contact-info-card">
-                        <h3>📍 Address</h3>
-                        <p>Sri Ram Finance Building<br>
-                        123 Financial District<br>
-                        Mumbai, Maharashtra 400001<br>
-                        India</p>
-                    </div>
+  <div class="footer-line"></div>
 
-                    <div class="contact-info-card">
-                        <h3>📞 Phone</h3>
-                        <p>Main: +91 1234567890<br>
-                        Toll Free: 1800-122-3456<br>
-                        Mobile: +91 1234567890</p>
-                    </div>
+  <!-- Office Info -->
+  <div class="footer-info">
+    <p><strong>Registered Office</strong><br>
+    Shriram Finance Limited, 14A, Sri Towers, South Phase, Industrial Estate, Guindy, Chennai – 600 032, Tamil Nadu.<br>
+    Tel. No: 044 485 24 666 | Fax: 044 485 25 666</p>
 
-                    <div class="contact-info-card">
-                        <h3>✉️ Email</h3>
-                        <p>General: info@sriramfinance.com<br>
-                        Support: support@sriramfinance.com<br>
-                        Careers: careers@sriramfinance.com</p>
-                    </div>
+    <p><strong>Corporate Identity Number (CIN)</strong> – L65191TN1979PLC007874</p>
+    <p><strong>IRDAI Corporate Agent (Composite)</strong> - CA0197 (Validity – 01-Apr-2025 to 31-Mar-2028)</p>
+  </div>
 
-                    <div class="contact-info-card">
-                        <h3>🕐 Business Hours</h3>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
-                        Saturday: 10:00 AM - 4:00 PM<br>
-                        Sunday: Closed</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Footer Links -->
+  <div class="footer-links">
+    <a href="#">Terms and Conditions</a> |
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Site Map</a> |
+    <a href="#">Interest Rate Policy</a> |
+    <a href="#">Loan Recovery Policy</a> |
+    <a href="#">Policy on Penal Charge</a> |
+    <a href="#">Consumer Education Literature</a> |
+    <a href="#">Inactive/Terminated DSAs</a> |
+    <a href="#">Reach Us</a>
+  </div>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>How do I open an account?</h3>
-                    <p>Opening an account is simple. Visit our office or contact us online, and our team will guide you through the process. You'll need basic documents like ID proof and address proof.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What are the minimum investment amounts?</h3>
-                    <p>Minimum investment varies by product. Mutual funds start from ₹500, while real estate investments require higher amounts. Contact us for specific details.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Is my money safe with you?</h3>
-                    <p>Yes, absolutely. We follow all regulatory guidelines and maintain the highest security standards. Your investments are protected and insured.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How often can I check my portfolio?</h3>
-                    <p>You can check your portfolio anytime through our online portal. We also provide quarterly statements and annual reviews with our advisors.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="footer-copy">
+    © 2025 Shriram Finance Limited. All rights reserved.
+  </div>
+</footer>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Start Your Financial Journey?</h2>
-            <p>Join thousands of satisfied clients who trust Sri Ram Finance</p>
-            <a href="#contact" class="btn btn-light">Contact Us</a>
-        </div>
-    </section>
+<!-- Back to Top -->
+<button class="back-to-top" id="scrollTopBtn"><i class="fas fa-angle-up"></i></button>
+<script src="script.js"></script>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Sri Ram Finance</h4>
-                    <p>Your trusted partner in financial growth</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>Email: info@sriramfinance.com</p>
-                    <p>Phone: +91 1234567890</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                        <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Sri Ram Finance. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    l<script src="script.js"></script>
 </body>
 </html>
